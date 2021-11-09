@@ -1,9 +1,9 @@
 # Java_Game_development
  It's a repository for my jaa game development 
 
--intellij idea is use to create java codes
+ -intellij idea is use to create java codes
 
--game class structures
+ -game class structures
         ->Game files
         ->skeleton of the game
         ->Game states
@@ -43,7 +43,7 @@
                     |play| --pause-->|paused|
                     |play| <--resume--|paused|
 
-Advanced methods and Packages
+ Advanced methods and Packages
         ->Abstract Window toolKit(AWT)
         ->java Swing
         ->Input Output Stream and Sound
@@ -90,13 +90,13 @@ Advanced methods and Packages
                     It is built on the top of AWT (Abstract Windowing Toolkit) API and entirely written in java.
                     Unlike AWT, Java Swing provides platform-independent and lightweight components.
 
-Coordinate System
+ Coordinate System
         left side top corner is 0,0
             --> left to right is  x+
             --> Bottem is Y+
 
 
-Java Swing
+ Java Swing
         --JFrame :JFrame is responsible for only displaying the frame of the game.
         --Jpanel :is provice base in which an application can attach any other component.
                 //jpanel is added to JFrame to create GUI
@@ -132,10 +132,10 @@ Java Swing
                         ---->4.print the JPanal with ImageIcon        obj.printIcon();
 
 
-Java Util
+ Java Util
         --Random :The java.util.Random class instance is used to generate a stream of pseudorandom numbers
 
-Playing audio in java
+ Playing audio in java
         -- 1st --> input audio using IO
         -- 2nd --> use AudioInputSystem/AudioSystem : specify audio format and length
         -- 3rd --> using clip class we can control audio file
