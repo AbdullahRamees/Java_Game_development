@@ -3,7 +3,7 @@
 
  -->intellij idea is use to create java codes
 
-  -game class structures
+  -->game class structures
         ->Game files
         ->skeleton of the game
         ->Game states
