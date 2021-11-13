@@ -25,10 +25,19 @@ public class Level_00 {
                 if(Map[i][j]>0){
                     G2D.setColor(Color.black);
                     G2D.fillRect(j*MapWidth+80,i*mapheight+50,MapWidth,mapheight);
+
+                    G2D.setStroke(new BasicStroke(3));
+                    G2D.setColor(Color.gray);
+                    G2D.drawRect(j*MapWidth+80,i*mapheight+50,MapWidth,mapheight);
                 }
 
             }
         }
+
+    }
+
+    public void setbrickvalue(int value ,int row , int column){
+        Map[row][column]=value;
 
     }
 }
