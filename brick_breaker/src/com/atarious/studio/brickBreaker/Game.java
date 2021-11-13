@@ -111,7 +111,6 @@ public class Game extends JPanel implements KeyListener, ActionListener {
                         BallMoveY = -BallMoveY;
                     }
 
-
             //brick functions
             for (int i = 0; i < map.Map.length; i++) {
                 for (int j = 0; j < map.Map[0].length; i++) {
