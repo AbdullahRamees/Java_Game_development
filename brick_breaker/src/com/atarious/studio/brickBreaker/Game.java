@@ -104,7 +104,6 @@ public class Game extends JPanel implements KeyListener, ActionListener {
         public void actionPerformed(ActionEvent e) {
             //repainting the event action
             timer.start();
-
             //ball movement
                 if(Play){
                     if(new Rectangle(BallPosX,BallPosY,20,20).intersects
@@ -216,7 +215,9 @@ public class Game extends JPanel implements KeyListener, ActionListener {
             }
         }
 
+
     }
+
 
     //peddle  movement  methods
     public void moveleft() {

@@ -4,6 +4,7 @@ package com.atarious.studio.brickBreaker;
 import java.awt.*;
 
 public class Level_00 {
+
     public int[][] Map;
     public int MapWidth;
     public int mapheight;
@@ -17,6 +18,7 @@ public class Level_00 {
             }
         }
 
+ brick_breaker
         MapWidth = 540 / column;
         mapheight = 150 / row;
     }
@@ -31,6 +33,7 @@ public class Level_00 {
                     G2D.setStroke(new BasicStroke(3));
                     G2D.setColor(Color.gray);
                     G2D.drawRect(j * MapWidth + 80, i * mapheight + 50, MapWidth, mapheight);
+
                 }
 
             }
@@ -38,8 +41,10 @@ public class Level_00 {
 
     }
 
+
     public void setbrickvalue(int value, int row, int column) {
         Map[row][column] = value; //setting brick to 0 to remove on screen
+
 
     }
 }
