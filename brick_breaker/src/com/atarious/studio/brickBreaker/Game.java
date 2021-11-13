@@ -23,8 +23,8 @@ public class Game extends JPanel implements KeyListener,ActionListener {
         //playable ball prob properties
         private int BallPosX = 120;                          //starting position of ball X axis
         private int BallPosY = 350;                          //starting position of Ball Y axis
-        private int BallX = -1;                              //ball traverse distance along X axis
-        private int BallY = -2;                              //Ball traverse distance along Y axis
+        private int BallMoveX = -1;                              //ball traverse distance along X axis
+        private int BallMoveY = -2;                              //Ball traverse distance along Y axis
 
         //constructor of Game class
         public Game (){
@@ -57,15 +57,6 @@ public class Game extends JPanel implements KeyListener,ActionListener {
 
         }
 
-        //peddle  movement  methods
-        public void moveleft (){
-            Play=true;
-            PlayerX -= playerMove;
-        }
-        public void moveRight (){
-            Play=true;
-            PlayerX += playerMove;
-        }
 
 
 
@@ -75,6 +66,24 @@ public class Game extends JPanel implements KeyListener,ActionListener {
         public void actionPerformed(ActionEvent e) {
             //repainting the event action
             timer.start();
+            //ball movement
+                if(Play){
+                    if(new Rectangle(BallPosX,BallPosY,20,20).intersects
+                            (new Rectangle(PlayerX,550,100,8))){
+                        BallMoveY = -BallMoveY;
+                    }
+                    BallPosX += BallMoveX;
+                    BallPosY += BallMoveY;
+                    if(BallPosX==10){
+                        BallMoveX = -BallMoveX;
+                    }
+                    if(BallPosY==10){
+                        BallMoveY = -BallMoveY;
+                    }
+                    if(BallPosX>670){
+                        BallMoveX = -BallMoveX;
+                    }
+                }
             repaint();
 
         }
@@ -105,8 +114,18 @@ public class Game extends JPanel implements KeyListener,ActionListener {
             }
 
         }
+        //peddle  movement  methods
+        public void moveleft (){
+            Play=true;
+            PlayerX =PlayerX - playerMove;
+        }
+        public void moveRight (){
+            Play=true;
+            PlayerX =PlayerX + playerMove;
+        }
 
-        @Override
+
+    @Override
         public void keyReleased(KeyEvent e) {
 
         }
