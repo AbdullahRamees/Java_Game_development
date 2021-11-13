@@ -21,6 +21,7 @@ public class Game extends JPanel implements KeyListener,ActionListener {
         private int playerMove = 20;                         //action position when user hit key
 
         //playable ball prob properties
+
         private int BallPosX = 120;                              //starting position of ball X axis
         private int BallPosY = 350;                              //starting position of Ball Y axis
         private int BallMoveX = -1;                              //ball traverse distance along X axis
@@ -31,6 +32,7 @@ public class Game extends JPanel implements KeyListener,ActionListener {
         //constructor of Game class
         public Game (){
             map=new Level_00(3,7);
+
             addKeyListener(this);
             setFocusable(true);
             setFocusTraversalKeysEnabled(false);
@@ -44,7 +46,7 @@ public class Game extends JPanel implements KeyListener,ActionListener {
             graphics.fillRect(1,1,692,592);
 
             map.draw((Graphics2D) graphics);
-
+          
             //paint boarder of frame
             graphics.setColor(Color.red);
             graphics.fillRect(0,0,3,592);   //left boarder
@@ -65,12 +67,12 @@ public class Game extends JPanel implements KeyListener,ActionListener {
 
 
 
-
     //overriding abstract methods
         @Override
         public void actionPerformed(ActionEvent e) {
             //repainting the event action
             timer.start();
+
             //ball movement
                 if(Play){
                     if(new Rectangle(BallPosX,BallPosY,20,20).intersects
@@ -115,6 +117,7 @@ public class Game extends JPanel implements KeyListener,ActionListener {
                         BallMoveX = -BallMoveX;
                     }
                 }
+
             repaint();
 
         }
@@ -145,6 +148,7 @@ public class Game extends JPanel implements KeyListener,ActionListener {
             }
 
         }
+
         //peddle  movement  methods
         public void moveleft (){
             Play=true;
