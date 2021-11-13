@@ -110,27 +110,7 @@ public class Game extends JPanel implements KeyListener, ActionListener {
                             (new Rectangle(PlayerX,550,100,8))){
                         BallMoveY = -BallMoveY;
                     }
-                    for (int i =0;i<map.Map.length;i++){
-                        for(int j=0;j<map.Map[0].length;i++){
-                           int brickX=map.MapWidth+80;
-                           int brickY=map.mapheight+50;
-                           int brickWidth=map.MapWidth;
-                           int brickHeight=map.mapheight;
 
-                           Rectangle rect=new Rectangle(brickX,brickY,brickWidth,brickHeight);
-                           Rectangle ball=new Rectangle(BallPosX,BallPosY,20,20);
-                           Rectangle brick=rect;
-
-                           if(ball.intersects(brick)){
-                               map.setbrickvalue(0,i,j);
-                               TotalBrick--;
-                               scores=+5;
-                               if(BallPosX+19<=brick.x||BallPosX+1>= brick.x+brick.width){
-                                   BallMoveX= -BallMoveX;
-                               }else{
-                                   BallMoveY= -BallMoveY;
-                               }
-                           }
 
             //brick functions
             for (int i = 0; i < map.Map.length; i++) {

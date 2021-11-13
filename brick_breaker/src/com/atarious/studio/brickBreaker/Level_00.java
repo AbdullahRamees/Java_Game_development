@@ -18,7 +18,7 @@ public class Level_00 {
             }
         }
 
- brick_breaker
+
         MapWidth = 540 / column;
         mapheight = 150 / row;
     }
